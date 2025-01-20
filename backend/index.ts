@@ -1,5 +1,5 @@
-import app from "./app.js";
-import { connectToDatabase } from "./db/connection.js";
+import app from "./src/app.js";
+import { connectToDatabase } from "./src/db/connection.js";
 
 //connections and listeneres
 const PORT = process.env.PORT || 5000;
@@ -13,3 +13,5 @@ connectToDatabase()
     console.error("Failed to connect to database:", err);
     process.exit(1);
   });
+
+  
