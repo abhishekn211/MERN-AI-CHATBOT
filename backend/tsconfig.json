@@ -4,8 +4,15 @@
     "moduleResolution": "NodeNext",
     "target": "ES2022",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "dist",            // The compiled JavaScript files will go directly into 'dist'
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "index.ts"]
+  "include": [
+    "src/**/*.ts",              // Include all .ts files in the src folder
+    "backend/**/*.ts"           // Include all .ts files in the backend folder
+  ],
+  "exclude": [
+    "node_modules",             // Exclude the node_modules directory
+    "dist"                      // Exclude the dist folder (compiled output)
+  ]
 }
