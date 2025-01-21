@@ -8,7 +8,7 @@ config();
 const app = express();
 
 //middlewares
-app.use(cors({ origin: "http://localhost:5174", credentials: true }));
+app.use(cors({ origin: "https://mern-ai-chatbot-frontend-n7lp.onrender.com", credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
