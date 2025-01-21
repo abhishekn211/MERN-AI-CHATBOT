@@ -16,6 +16,6 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 //remove it in production
 //app.use(morgan("dev"));
 
-app.use("https://mern-ai-chatbot-frontend-n7lp.onrender.com", appRouter);
+app.use("/", appRouter);
 
 export default app;
