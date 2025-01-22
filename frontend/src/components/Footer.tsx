@@ -11,7 +11,7 @@ const Footer = () => {
         }}
       >
         <p style={{ fontSize: "30px", textAlign: "center", padding: "20px" }}>
-          Built by Abhishek 💘
+          Built by Abhishek 
         </p>
       </div>
     </footer>
