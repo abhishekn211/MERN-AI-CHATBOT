@@ -36,21 +36,24 @@ export const userSignup = async (
     // create token and store cookie
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      domain: "https://mern-ai-chatbot-g55f.onrender.com",
+      domain: "mern-ai-chatbot-g55f.onrender.com",
       signed: true,
+      secure: true,
       path: "/",
+      sameSite: "None",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
     const expires = new Date();
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
-      path: "/",
-      domain: "https://mern-ai-chatbot-g55f.onrender.com",
-      expires,
       httpOnly: true,
+      domain: "mern-ai-chatbot-g55f.onrender.com",
       signed: true,
-    });
+      secure: true,
+      path: "/",
+      sameSite: "None",
+});
 
     return res
       .status(201)
@@ -82,20 +85,23 @@ export const userLogin = async (
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      domain: "https://mern-ai-chatbot-g55f.onrender.com",
+      domain: "mern-ai-chatbot-g55f.onrender.com",
       signed: true,
+      secure: true,
       path: "/",
+      sameSite: "None",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
     const expires = new Date();
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
-      path: "/",
-      domain: "https://mern-ai-chatbot-g55f.onrender.com",
-      expires,
       httpOnly: true,
+      domain: "mern-ai-chatbot-g55f.onrender.com",
       signed: true,
+      secure: true,
+      path: "/",
+      sameSite: "None",
     });
 
     return res
@@ -147,9 +153,11 @@ export const userLogout = async (
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      domain: "https://mern-ai-chatbot-g55f.onrender.com",
+      domain: "mern-ai-chatbot-g55f.onrender.com",
       signed: true,
+      secure: true,
       path: "/",
+      sameSite: "None",
     });
 
     return res
