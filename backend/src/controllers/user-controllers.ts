@@ -40,7 +40,7 @@ export const userSignup = async (
       signed: true,
       secure: true,
       path: "/",
-      sameSite: "None",
+      sameSite: "none",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -52,7 +52,7 @@ export const userSignup = async (
       signed: true,
       secure: true,
       path: "/",
-      sameSite: "None",
+      sameSite: "none",
 });
 
     return res
@@ -89,7 +89,7 @@ export const userLogin = async (
       signed: true,
       secure: true,
       path: "/",
-      sameSite: "None",
+      sameSite: "none",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -101,7 +101,7 @@ export const userLogin = async (
       signed: true,
       secure: true,
       path: "/",
-      sameSite: "None",
+      sameSite: "none",
     });
 
     return res
@@ -157,7 +157,7 @@ export const userLogout = async (
       signed: true,
       secure: true,
       path: "/",
-      sameSite: "None",
+      sameSite: "none",
     });
 
     return res
